@@ -1,0 +1,1307 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>File Recovery | Cyber Forensics</title>
+
+<style>
+
+/* =========================================================
+   CYBER FORENSICS - FILE RECOVERY
+   ALL CSS IS INSIDE THIS HTML FILE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #eaf2f8;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    min-height: 75px;
+    padding: 18px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: #091624;
+    border-bottom: 1px solid #1d3548;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo::before {
+    content: "◈ ";
+    color: #20e0c0;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #aebdca;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #20e0c0;
+}
+
+nav a[href="recoveryy.html"] {
+    color: #20e0c0;
+}
+
+
+/* ================= HERO ================= */
+
+.banner {
+    min-height: 360px;
+    padding: 70px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(32, 224, 192, 0.14),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #07111f,
+            #0b1b2c,
+            #07111f
+        );
+
+    border-bottom: 1px solid #1b3449;
+}
+
+.banner h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.banner h1 span {
+    color: #20e0c0;
+}
+
+.banner h1::after {
+    content: "";
+    display: block;
+
+    width: 75px;
+    height: 4px;
+
+    margin: 20px auto 0;
+
+    background: #20e0c0;
+    border-radius: 10px;
+}
+
+.banner p {
+    max-width: 780px;
+
+    color: #aab9c7;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 0 90px;
+}
+
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+    margin-bottom: 30px;
+
+    color: #ffffff;
+
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.section-title::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+    height: 28px;
+
+    margin-right: 12px;
+
+    vertical-align: -4px;
+
+    background: #20e0c0;
+
+    border-radius: 5px;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    margin-bottom: 30px;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d1d2d,
+            #0a1725
+        );
+
+    border: 1px solid #1d3a4e;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color: #20e0c0;
+
+    box-shadow:
+        0 15px 35px rgba(32, 224, 192, 0.08);
+}
+
+.card h2 {
+    color: #ffffff;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.card h2::before {
+    content: "▸ ";
+
+    color: #20e0c0;
+}
+
+
+/* ================= FORM ================= */
+
+label {
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    color: #c8d5df;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background: #07111f;
+
+    color: #e8f0f7;
+
+    border: 1px solid #29465a;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+select:focus {
+    border-color: #20e0c0;
+
+    box-shadow:
+        0 0 0 3px rgba(32, 224, 192, 0.08);
+}
+
+select option {
+    background: #0a1725;
+    color: #ffffff;
+}
+
+
+/* ================= FILE INPUT ================= */
+
+input[type="file"] {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #07111f;
+
+    color: #9fb0bd;
+
+    border: 1px dashed #315267;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #20e0c0;
+}
+
+
+/* ================= RADIO ================= */
+
+.radio-group {
+    display: flex;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+
+    padding: 8px 0 22px;
+}
+
+.radio-group label {
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #aebdca;
+
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #20e0c0;
+
+    cursor: pointer;
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+    padding: 13px 25px;
+
+    background: #20e0c0;
+
+    color: #061219;
+
+    border: 1px solid #20e0c0;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: transparent;
+
+    color: #20e0c0;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(32, 224, 192, 0.08);
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-container {
+    margin-top: 15px;
+}
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #9fb0bd;
+
+    font-size: 13px;
+}
+
+.progress {
+    width: 100%;
+
+    height: 28px;
+
+    background: #050d16;
+
+    border: 1px solid #1d3a4e;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 65%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding-right: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #159f89,
+            #20e0c0
+        );
+
+    color: #03110e;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    border-radius: 20px;
+}
+
+.scan-message {
+    margin-top: 15px;
+
+    color: #91a3b3;
+
+    font-size: 14px;
+}
+
+
+/* ================= STATUS BOXES ================= */
+
+.recovery-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.stat {
+    padding: 22px;
+
+    background: #0a1725;
+
+    border: 1px solid #1d3a4e;
+
+    border-radius: 12px;
+}
+
+.stat h3 {
+    color: #9fb0bd;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.stat strong {
+    color: #20e0c0;
+
+    font-size: 30px;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+
+    min-width: 750px;
+
+    border-collapse: collapse;
+
+    background: #0a1725;
+
+    border: 1px solid #1d3a4e;
+}
+
+th {
+    padding: 16px;
+
+    text-align: left;
+
+    color: #20e0c0;
+
+    background: #102638;
+
+    border-bottom: 1px solid #24445a;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+td {
+    padding: 16px;
+
+    color: #b9c7d3;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #172d3e;
+}
+
+tbody tr {
+    transition: 0.25s;
+}
+
+tbody tr:hover {
+    background: #0d2132;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+    color: #20e0c0;
+
+    font-weight: 700;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.summary-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.summary-item {
+    padding: 18px;
+
+    background: #07111f;
+
+    border: 1px solid #1d3a4e;
+
+    border-radius: 8px;
+}
+
+.summary-item span {
+    color: #8fa1af;
+
+    font-size: 13px;
+}
+
+.summary-item strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #050d16;
+
+    border-top: 1px solid #1a3245;
+}
+
+footer p {
+    color: #718596;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    header {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .recovery-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        position: relative;
+
+        padding: 20px 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 11px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .banner {
+        min-height: 300px;
+
+        padding: 55px 18px;
+    }
+
+    .banner h1 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .banner p {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 92%;
+
+        padding-top: 50px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .recovery-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-list {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+Cyber Forensics
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="recoveryy.html">Recovery</a>
+
+<a href="erasure.html">Secure Erasure</a>
+
+<a href="hashing.html">Hash Verification</a>
+
+<a href="evidence.html">Evidence</a>
+
+<a href="reports.html">Reports</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- ================= BANNER ================= -->
+
+<section class="banner">
+
+<h1>
+Advanced <span>File Recovery</span>
+</h1>
+
+<p>
+Recover deleted files from USB drives, HDDs, SSDs and memory cards
+using advanced forensic scanning techniques.
+</p>
+
+</section>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="container">
+
+
+<!-- ================= RECOVERY STATS ================= -->
+
+<div class="recovery-stats">
+
+<div class="stat">
+
+<h3>FILES SCANNED</h3>
+
+<strong>2,145</strong>
+
+</div>
+
+
+<div class="stat">
+
+<h3>DELETED FILES</h3>
+
+<strong>325</strong>
+
+</div>
+
+
+<div class="stat">
+
+<h3>RECOVERED</h3>
+
+<strong>312</strong>
+
+</div>
+
+
+<div class="stat">
+
+<h3>SUCCESS RATE</h3>
+
+<strong>96%</strong>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= DEVICE SELECTION ================= -->
+
+<div class="card">
+
+<h2>Select Storage Device</h2>
+
+
+<label for="device">
+Select Device
+</label>
+
+<select id="device">
+
+<option>USB Drive</option>
+
+<option>Hard Disk</option>
+
+<option>SSD</option>
+
+<option>Memory Card</option>
+
+<option>External Drive</option>
+
+</select>
+
+
+
+<label for="disk">
+Upload Disk Image (Optional)
+</label>
+
+<input
+type="file"
+id="disk"
+accept=".img,.dd,.iso"
+>
+
+
+
+<label>
+Scan Method
+</label>
+
+
+<div class="radio-group">
+
+<label>
+
+<input
+type="radio"
+name="scan"
+checked
+>
+
+Quick Scan
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="scan"
+>
+
+Deep Scan
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="scan"
+>
+
+Signature Scan
+
+</label>
+
+</div>
+
+
+<button onclick="startScan()">
+Start Recovery Scan
+</button>
+
+</div>
+
+
+
+<!-- ================= PROGRESS ================= -->
+
+<div class="card">
+
+<h2>Recovery Progress</h2>
+
+
+<div class="progress-container">
+
+<div class="progress-info">
+
+<span>
+Scanning Storage Device
+</span>
+
+<span id="progressText">
+65%
+</span>
+
+</div>
+
+
+<div class="progress">
+
+<div
+class="progress-bar"
+id="progressBar"
+>
+65%
+</div>
+
+</div>
+
+
+<p class="scan-message" id="scanMessage">
+
+Scanning sectors... Recovering deleted evidence...
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= RECOVERED FILES ================= -->
+
+<div class="card">
+
+<h2>Recovered Files</h2>
+
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>File Name</th>
+
+<th>Type</th>
+
+<th>Size</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td>Project_Report.pdf</td>
+
+<td>PDF</td>
+
+<td>2.3 MB</td>
+
+<td class="status">
+Recovered
+</td>
+
+<td>
+<button onclick="recoverFile(this)">
+Recover
+</button>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Evidence_Image.jpg</td>
+
+<td>Image</td>
+
+<td>4.8 MB</td>
+
+<td class="status">
+Recovered
+</td>
+
+<td>
+<button onclick="recoverFile(this)">
+Recover
+</button>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Database_Backup.zip</td>
+
+<td>ZIP</td>
+
+<td>25 MB</td>
+
+<td class="status">
+Recovered
+</td>
+
+<td>
+<button onclick="recoverFile(this)">
+Recover
+</button>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Meeting_Video.mp4</td>
+
+<td>Video</td>
+
+<td>150 MB</td>
+
+<td class="status">
+Recovered
+</td>
+
+<td>
+<button onclick="recoverFile(this)">
+Recover
+</button>
+</td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= RECOVERY SUMMARY ================= -->
+
+<div class="card">
+
+<h2>Recovery Summary</h2>
+
+
+<div class="summary-list">
+
+
+<div class="summary-item">
+
+<span>
+Total Files Scanned
+</span>
+
+<strong>
+2,145
+</strong>
+
+</div>
+
+
+<div class="summary-item">
+
+<span>
+Deleted Files Found
+</span>
+
+<strong>
+325
+</strong>
+
+</div>
+
+
+<div class="summary-item">
+
+<span>
+Recovered Successfully
+</span>
+
+<strong>
+312
+</strong>
+
+</div>
+
+
+<div class="summary-item">
+
+<span>
+Recovery Success Rate
+</span>
+
+<strong>
+96%
+</strong>
+
+</div>
+
+
+<div class="summary-item">
+
+<span>
+Scan Time
+</span>
+
+<strong>
+08 Minutes 24 Seconds
+</strong>
+
+</div>
+
+
+<div class="summary-item">
+
+<span>
+Recovery Status
+</span>
+
+<strong>
+Completed
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Integrated Secure Data Erasure & Advanced File Recovery Tool
+
+<br>
+
+Digital Forensics | File Recovery Module
+
+</p>
+
+</footer>
+
+
+
+<script>
+
+/* ================= RECOVERY DEMO ================= */
+
+function startScan() {
+
+    const bar = document.getElementById("progressBar");
+
+    const text = document.getElementById("progressText");
+
+    const message = document.getElementById("scanMessage");
+
+    let progress = 0;
+
+    message.textContent =
+        "Initializing forensic recovery scan...";
+
+    const interval = setInterval(function () {
+
+        progress++;
+
+        bar.style.width = progress + "%";
+
+        bar.textContent = progress + "%";
+
+        text.textContent = progress + "%";
+
+
+        if (progress < 30) {
+
+            message.textContent =
+                "Analyzing storage sectors...";
+
+        }
+
+        else if (progress < 60) {
+
+            message.textContent =
+                "Searching for deleted file signatures...";
+
+        }
+
+        else if (progress < 90) {
+
+            message.textContent =
+                "Recovering deleted evidence...";
+
+        }
+
+        else {
+
+            message.textContent =
+                "Finalizing recovery scan...";
+
+        }
+
+
+        if (progress >= 100) {
+
+            clearInterval(interval);
+
+            message.textContent =
+                "Recovery scan completed successfully.";
+
+        }
+
+    }, 40);
+
+}
+
+
+/* ================= RECOVER FILE ================= */
+
+function recoverFile(button) {
+
+    button.textContent = "Recovered";
+
+    button.style.background = "transparent";
+
+    button.style.color = "#20e0c0";
+
+    button.style.borderColor = "#20e0c0";
+
+    button.disabled = true;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
