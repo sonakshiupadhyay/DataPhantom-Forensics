@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Integrated Secure Data Erasure & File Recovery Tool</title>
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#08121f;
+    color:white;
+}
+
+header{
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1a2e;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00f7ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00f7ff;
+}
+
+.hero{
+
+    height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 80px;
+    background:linear-gradient(to right,#08121f,#11253d);
+}
+
+.hero-text{
+    width:55%;
+}
+
+.hero-text h1{
+    font-size:48px;
+    color:#00f7ff;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:30px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#00f7ff;
+    color:#08121f;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    margin-right:15px;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.hero-image{
+    width:40%;
+}
+
+.hero-image img{
+    width:100%;
+}
+
+section{
+    padding:70px 80px;
+}
+
+.title{
+    text-align:center;
+    font-size:38px;
+    color:#00f7ff;
+    margin-bottom:50px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#10243d;
+    padding:30px;
+    border-radius:12px;
+    transition:.3s;
+    border:1px solid #00f7ff30;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #00f7ff55;
+}
+
+.card h3{
+    color:#00f7ff;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:28px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    flex-wrap:wrap;
+}
+
+.stat{
+    margin:20px;
+}
+
+.stat h2{
+    color:#00f7ff;
+    font-size:45px;
+}
+
+.workflow{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+
+}
+
+.step{
+
+background:#10243d;
+padding:25px;
+border-radius:10px;
+
+}
+
+.step h3{
+
+color:#00f7ff;
+margin-bottom:15px;
+
+}
+
+footer{
+
+background:#0b1a2e;
+padding:25px;
+text-align:center;
+margin-top:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Cyber Forensics</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="erasure.html">Secure Erasure</a>
+        <a href="hashing.html">Hash Verification</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="reports.html">Reports</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Integrated Secure Data Erasure & Advanced File Recovery Tool</h1>
+
+<p>
+
+A Digital Forensics Platform for Secure Data Recovery,
+Permanent Data Sanitization, Evidence Integrity,
+Hash Verification and Automated Investigation Reports.
+
+</p>
+
+<a href="#" class="btn">Launch Tool</a>
+
+<a href="#" class="btn">Learn More</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Core Modules</h2>
+
+<div class="features">
+
+<div class="card">
+
+<h3>🔍 File Recovery</h3>
+
+<p>
+
+Recover deleted files using Quick Scan,
+Deep Scan and Signature-Based Recovery.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🛡 Secure Data Erasure</h3>
+
+<p>
+
+Permanently erase sensitive files using
+DoD, Gutmann and Zero Fill algorithms.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔐 Hash Verification</h3>
+
+<p>
+
+Generate MD5, SHA-1, SHA-256 and SHA-512
+to verify evidence integrity.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📄 Automated Reports</h3>
+
+<p>
+
+Generate detailed PDF forensic investigation
+reports with recovered evidence.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">System Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>500+</h2>
+
+<p>Recovered Files</p>
+
+</div>
+
+<div class="stat">
+
+<h2>99%</h2>
+
+<p>Integrity Accuracy</p>
+
+</div>
+
+<div class="stat">
+
+<h2>256-bit</h2>
+
+<p>SHA Encryption</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Secure Erasure</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Investigation Workflow</h2>
+
+<div class="workflow">
+
+<div class="step">
+
+<h3>1</h3>
+
+<p>Scan Storage Device</p>
+
+</div>
+
+<div class="step">
+
+<h3>2</h3>
+
+<p>Recover Deleted Files</p>
+
+</div>
+
+<div class="step">
+
+<h3>3</h3>
+
+<p>Generate File Hashes</p>
+
+</div>
+
+<div class="step">
+
+<h3>4</h3>
+
+<p>Verify Evidence Integrity</p>
+
+</div>
+
+<div class="step">
+
+<h3>5</h3>
+
+<p>Secure Data Erasure</p>
+
+</div>
+
+<div class="step">
+
+<h3>6</h3>
+
+<p>Generate Investigation Report</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Integrated Secure Data Erasure & File Recovery Tool |
+Digital Forensics Project
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
