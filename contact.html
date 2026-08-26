@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Digital Forensics Tool</title>
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#08121f;
+color:white;
+}
+
+header{
+background:#0b1a2e;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.banner{
+background:linear-gradient(to right,#08121f,#12345b);
+padding:60px;
+text-align:center;
+}
+
+.banner h1{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:50px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.card{
+background:#10243d;
+padding:30px;
+border-radius:12px;
+border:1px solid rgba(0,229,255,.3);
+}
+
+.card h2{
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin:15px 0 8px;
+font-weight:600;
+}
+
+input,
+textarea{
+
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#1d3a5f;
+color:white;
+
+}
+
+textarea{
+height:140px;
+resize:none;
+}
+
+button{
+
+background:#00e5ff;
+color:#08121f;
+padding:14px 28px;
+border:none;
+border-radius:30px;
+margin-top:20px;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+
+}
+
+button:hover{
+
+background:white;
+
+}
+
+.team{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+}
+
+.member{
+
+background:#1a3455;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+
+}
+
+.member:hover{
+
+transform:translateY(-5px);
+box-shadow:0 0 15px rgba(0,229,255,.4);
+
+}
+
+.member h3{
+
+color:#00e5ff;
+margin-bottom:10px;
+
+}
+
+.info p{
+
+margin:10px 0;
+
+}
+
+footer{
+
+background:#0b1a2e;
+padding:20px;
+text-align:center;
+margin-top:40px;
+
+}
+
+@media(max-width:900px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Cyber Forensics
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="recovery.html">Recovery</a>
+<a href="erasure.html">Secure Erasure</a>
+<a href="hashing.html">Hash Verification</a>
+<a href="reports.html">Reports</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Contact Us</h1>
+
+<p>
+Have questions or feedback? Get in touch with our Digital Forensics project team.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Send a Message</h2>
+
+<form>
+
+<label>Your Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Subject</label>
+<input type="text" placeholder="Enter subject">
+
+<label>Message</label>
+<textarea placeholder="Write your message here..."></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Project Team</h2>
+
+<div class="team">
+
+<div class="member">
+<h3>Sonakshi Upadhyay</h3>
+<p>Project Developer</p>
+</div>
+
+<div class="member">
+<h3>Krishna Bhardwaj</h3>
+<p>Project Developer</p>
+</div>
+
+<div class="member">
+<h3>Sagar Jain</h3>
+<p>Project Developer</p>
+</div>
+
+<div class="member">
+<h3>Sahil Kaira</h3>
+<p>Project Developer</p>
+</div>
+
+<div class="member">
+<h3>Manu Sharma</h3>
+<p>Project Developer</p>
+</div>
+
+</div>
+
+<br>
+
+<div class="info">
+
+<h2>Project Information</h2>
+
+<p><strong>Project:</strong> Integrated Secure Data Erasure & Advanced File Recovery Tool</p>
+
+<p><strong>Domain:</strong> Digital Forensics & Cybersecurity</p>
+
+<p><strong>Email:</strong> projectteam@example.com</p>
+
+<p><strong>Phone:</strong> +91-9876543210</p>
+
+<p><strong>College:</strong> Your College Name</p>
+
+<p><strong>Address:</strong> India</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Integrated Secure Data Erasure & Advanced File Recovery Tool
+
+<br>
+
+Designed by Team Cyber Forensics
+
+</p>
+
+</footer>
+
+</body>
+</html>

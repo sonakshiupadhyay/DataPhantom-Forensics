@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hash Verification | Digital Forensics Tool</title>
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#08121f;
+color:white;
+}
+
+header{
+background:#0b1a2e;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.banner{
+background:linear-gradient(to right,#08121f,#12345b);
+padding:60px;
+text-align:center;
+}
+
+.banner h1{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px 0;
+}
+
+.card{
+background:#10243d;
+padding:30px;
+border-radius:12px;
+margin-bottom:30px;
+border:1px solid rgba(0,229,255,.3);
+}
+
+.card h2{
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin:15px 0 8px;
+font-weight:600;
+}
+
+input[type=file],
+select,
+input[type=text]{
+
+width:100%;
+padding:12px;
+background:#1d3a5f;
+border:none;
+border-radius:8px;
+color:white;
+
+}
+
+button{
+background:#00e5ff;
+color:#08121f;
+border:none;
+padding:14px 25px;
+margin-top:20px;
+border-radius:30px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-right:15px;
+}
+
+button:hover{
+background:white;
+}
+
+.result{
+
+background:#0f1f33;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+
+}
+
+.hash{
+
+word-break:break-all;
+color:#00ff99;
+font-family:monospace;
+
+}
+
+.status{
+
+font-size:22px;
+font-weight:bold;
+margin-top:15px;
+color:#00ff99;
+
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#00e5ff;
+color:#08121f;
+padding:12px;
+}
+
+table td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+footer{
+background:#0b1a2e;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Cyber Forensics</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="recovery.html">Recovery</a>
+<a href="erasure.html">Secure Erasure</a>
+<a href="hashing.html">Hash Verification</a>
+<a href="reports.html">Reports</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Hash Verification</h1>
+
+<p>
+Generate and verify cryptographic hash values to ensure digital evidence integrity.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Generate Hash</h2>
+
+<label>Select File</label>
+
+<input type="file">
+
+<label>Select Hash Algorithm</label>
+
+<select>
+
+<option>MD5</option>
+
+<option>SHA-1</option>
+
+<option selected>SHA-256</option>
+
+<option>SHA-512</option>
+
+</select>
+
+<button>Generate Hash</button>
+
+</div>
+
+<div class="card">
+
+<h2>Verify Hash</h2>
+
+<label>Enter Original Hash</label>
+
+<input type="text" placeholder="Paste original hash value here">
+
+<button>Verify Integrity</button>
+
+</div>
+
+<div class="card">
+
+<h2>Generated Hash</h2>
+
+<div class="result">
+
+<p><strong>Algorithm:</strong> SHA-256</p>
+
+<p><strong>Generated Hash:</strong></p>
+
+<p class="hash">
+
+A8D53F48C6A72A19D51472FD7C7EAA14B6C5BDBA0A0BFE31C08D0D4AFA1E87BC
+
+</p>
+
+<div class="status">
+
+✔ Evidence Integrity Verified
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Verification History</h2>
+
+<table>
+
+<tr>
+
+<th>Case ID</th>
+
+<th>Algorithm</th>
+
+<th>Status</th>
+
+<th>Date</th>
+
+</tr>
+
+<tr>
+
+<td>CASE-101</td>
+
+<td>SHA-256</td>
+
+<td>Verified</td>
+
+<td>20 Aug 2026</td>
+
+</tr>
+
+<tr>
+
+<td>CASE-102</td>
+
+<td>SHA-512</td>
+
+<td>Verified</td>
+
+<td>21 Aug 2026</td>
+
+</tr>
+
+<tr>
+
+<td>CASE-103</td>
+
+<td>MD5</td>
+
+<td>Mismatch</td>
+
+<td>22 Aug 2026</td>
+
+</tr>
+
+<tr>
+
+<td>CASE-104</td>
+
+<td>SHA-256</td>
+
+<td>Verified</td>
+
+<td>23 Aug 2026</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Why Hash Verification?</h2>
+
+<p>
+
+• Ensures that recovered evidence has not been modified.<br><br>
+
+• Detects unauthorized changes to files.<br><br>
+
+• Maintains the integrity of digital evidence.<br><br>
+
+• Supports legal admissibility in digital forensic investigations.<br><br>
+
+• Uses secure cryptographic algorithms such as SHA-256 and SHA-512.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Integrated Secure Data Erasure & Advanced File Recovery Tool
+
+<br>
+
+Digital Forensics | Hash Verification Module
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

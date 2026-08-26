@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forensic Reports | Digital Forensics Tool</title>
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#08121f;
+color:white;
+}
+
+header{
+background:#0b1a2e;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00e5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.banner{
+background:linear-gradient(to right,#08121f,#12345b);
+padding:60px;
+text-align:center;
+}
+
+.banner h1{
+font-size:42px;
+color:#00e5ff;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px 0;
+}
+
+.card{
+background:#10243d;
+padding:30px;
+border-radius:12px;
+margin-bottom:30px;
+border:1px solid rgba(0,229,255,.3);
+}
+
+.card h2{
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:8px;
+font-weight:600;
+}
+
+input,
+textarea,
+select{
+
+width:100%;
+padding:12px;
+background:#1d3a5f;
+border:none;
+border-radius:8px;
+color:white;
+
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+
+background:#00e5ff;
+color:#08121f;
+padding:14px 25px;
+border:none;
+border-radius:30px;
+margin-top:20px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-right:15px;
+
+}
+
+button:hover{
+
+background:white;
+
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#00e5ff;
+color:#08121f;
+padding:12px;
+}
+
+table td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.status{
+color:#00ff99;
+font-weight:bold;
+}
+
+footer{
+background:#0b1a2e;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Cyber Forensics
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="recovery.html">Recovery</a>
+<a href="erasure.html">Secure Erasure</a>
+<a href="hashing.html">Hash Verification</a>
+<a href="reports.html">Reports</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Automated Investigation Reports</h1>
+
+<p>
+Generate comprehensive digital forensic reports containing recovered evidence,
+hash values, investigator details, and investigation summaries.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Generate Report</h2>
+
+<label>Case ID</label>
+
+<input type="text" placeholder="CASE-001">
+
+<label>Investigator Name</label>
+
+<input type="text" placeholder="Enter Investigator Name">
+
+<label>Device Examined</label>
+
+<select>
+
+<option>USB Drive</option>
+<option>Hard Disk</option>
+<option>SSD</option>
+<option>Memory Card</option>
+<option>Mobile Device</option>
+
+</select>
+
+<label>Investigation Summary</label>
+
+<textarea placeholder="Enter investigation findings..."></textarea>
+
+<button>Generate PDF Report</button>
+
+<button>Download Report</button>
+
+</div>
+
+<div class="card">
+
+<h2>Evidence Summary</h2>
+
+<table>
+
+<tr>
+<th>Evidence</th>
+<th>Status</th>
+<th>Hash</th>
+</tr>
+
+<tr>
+<td>Recovered Documents</td>
+<td class="status">Recovered</td>
+<td>SHA-256</td>
+</tr>
+
+<tr>
+<td>Recovered Images</td>
+<td class="status">Recovered</td>
+<td>SHA-256</td>
+</tr>
+
+<tr>
+<td>Recovered Videos</td>
+<td class="status">Recovered</td>
+<td>SHA-512</td>
+</tr>
+
+<tr>
+<td>Deleted Files</td>
+<td class="status">Erased</td>
+<td>MD5</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Recent Reports</h2>
+
+<table>
+
+<tr>
+
+<th>Case ID</th>
+
+<th>Date</th>
+
+<th>Investigator</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>CASE-101</td>
+
+<td>20 Aug 2026</td>
+
+<td>John Smith</td>
+
+<td class="status">Completed</td>
+
+</tr>
+
+<tr>
+
+<td>CASE-102</td>
+
+<td>21 Aug 2026</td>
+
+<td>A. Kumar</td>
+
+<td class="status">Completed</td>
+
+</tr>
+
+<tr>
+
+<td>CASE-103</td>
+
+<td>22 Aug 2026</td>
+
+<td>S. Sharma</td>
+
+<td class="status">Completed</td>
+
+</tr>
+
+<tr>
+
+<td>CASE-104</td>
+
+<td>23 Aug 2026</td>
+
+<td>R. Gupta</td>
+
+<td class="status">Completed</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Report Contents</h2>
+
+<ul style="line-height:2; padding-left:20px;">
+
+<li>✔ Investigator Information</li>
+
+<li>✔ Case Identification</li>
+
+<li>✔ Device Information</li>
+
+<li>✔ Recovered Files</li>
+
+<li>✔ Secure Erasure Details</li>
+
+<li>✔ Hash Verification Results</li>
+
+<li>✔ Chain of Custody</li>
+
+<li>✔ Digital Evidence Summary</li>
+
+<li>✔ Investigation Conclusion</li>
+
+<li>✔ Timestamp and Digital Signature</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Integrated Secure Data Erasure & Advanced File Recovery Tool
+
+<br>
+
+Digital Forensics | Automated Report Generation Module
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
